@@ -11,19 +11,25 @@ I'm having a blast coding this and it's a great first emulation project.
 Usage
 ================================================================================
 First of all, get and build package hachi (the core):
-```go get github.com/Francesco149/go-hachi/hachi
-go install github.com/Francesco149/go-hachi/hachi```
+```
+go get github.com/Francesco149/go-hachi/hachi
+go install github.com/Francesco149/go-hachi/hachi
+```
 
 Now you can build your desired front-end and associated driver. For now, the 
 only available front-end is termloop.
-```go get github.com/Francesco149/go-hachi/drivers
+```
+go get github.com/Francesco149/go-hachi/drivers
 go install github.com/Francesco149/go-hachi/drivers/termloop
 go get github.com/Francesco149/go-hachi/tl-hachi
-go install github.com/Francesco149/go-hachi/tl-hachi```
+go install github.com/Francesco149/go-hachi/tl-hachi
+```
 
 Running the emulator is as easy as:
-```cd $GOPATH/bin
-tl-hachi /path/to/program.ch8```
+```
+cd $GOPATH/bin
+tl-hachi /path/to/program.ch8
+```
 
 For the default key bindings, check the driver's source file.
 The default ones for the termloop driver are:
@@ -50,7 +56,8 @@ The default ones for the termloop driver are:
 	tl.KeyArrowRight: hachi.Key6,
 	tl.KeyArrowUp:    hachi.Key8,
 	tl.KeyEnter:      hachi.Key5,
-}```
+}
+```
 
 Implementing your own driver
 ================================================================================
@@ -113,7 +120,8 @@ func init() {
 	if err != nil {
 		log.Fatal(err)
 	}
-}```
+}
+```
 
 Using a driver
 ================================================================================
@@ -154,7 +162,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-}```
+}
+```
 
 Using the disassembler
 ================================================================================
@@ -208,4 +217,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-}```
+}
+```
